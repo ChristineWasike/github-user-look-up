@@ -1,15 +1,16 @@
 // var apiKey = require('/./.env').apiKey;
-var apiKey = "ed45430676946096b5d28100794ddfa6a1c8cc8d"
-var userInput = $("#name").val("");
+var apiKey = "86fdbbdf4e570a36d261a26774e17f6384d6d822"
+Person = function () {
 
-exports.getRepos = function(information, displayFunction){
-  $.get('https://api.github.com/users/daneden?access_token=' + userInput + '&appid=' + apiKey).then(function(response){
-    displayFunction(information, response.);
-    console.log(response);
+}
+Person.prototype.getRepos = function(){
+    var info = $("#name").val()
+  $.get('https://api.github.com/users/' + info + '?access_token=' + apiKey).then(function(response){
+    // displayFunction(information, response);
+    console.log(response.avatar_url);
   }).fail(function(error){
-    $(). (error)
     console.log(error.responseJSON.message);
   });
 }
 
-exports.
+exports.personModule = Person;

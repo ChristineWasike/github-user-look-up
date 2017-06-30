@@ -1,13 +1,15 @@
 // var apiKey = require('./../.env').apiKey;
-var apiKey = "ed45430676946096b5d28100794ddfa6a1c8cc8d"
-
-var info = $("#name").val("")
+var apiKey = "86fdbbdf4e570a36d261a26774e17f6384d6d822"
+var Person = require('./../js/user.js').personModule;
 $(document).ready(function() {
-  // var currentInfo = new getRepos();
-  $("#name").on('keyup', function(event) {
+  var avatar = new Person();
+  $("#button").click(function(event) {
+    event.preventDefault();
+    var info = $("#name").val()
+    var getX = avatar.getRepos(info);
     console.log(event.target.value);
-    $("#info").hide();
-    $("").prepend();
+    // $("#info").hide();
+    // $("").prepend();
   })
 
 });
