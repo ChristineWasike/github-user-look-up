@@ -1,0 +1,22 @@
+{
+  "name": "user-look-up",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Christine Wasike <christinewasike22@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ChristineWasike/github-user-look-up",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.18.1"
+  }
+}
