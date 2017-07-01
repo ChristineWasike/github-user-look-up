@@ -9,7 +9,7 @@ Person = function() {
 Person.prototype.getRepos = function() {
   var info = $("#name").val();
   $.get('https://api.github.com/users/' + info + '?access_token=' + apiKey).then(function(picture) {
-    $("#display").html(`<img src="${picture.avatar_url}" alt="github avatar here" class='img-responsive style="border-radius=8px; width:60%; height:60%;"'>`);
+    $("#display").html(`<img src="${picture.avatar_url}" alt="github avatar here" class="img-responsive" style="border-radius:8px; width:30%; height:30%;">`);
     console.log(picture.avatar_url);
 
   }).fail(function(error) {
