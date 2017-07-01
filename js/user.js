@@ -8,6 +8,13 @@ Person = function() {
 // }
 Person.prototype.getRepos = function() {
   var info = $("#name").val();
+  $.get('https://api.github.com/users/' + info + 'access_token=' + apiKey).then(function(picture) {
+    $("#display").html(<img src="${picture.avatar_url}" alt="github avatar here" class='img-responsive'> );
+    console.log(picture.avatar_url);
+
+  }).fail(function(error) {
+    console.log("errorname");
+  });
   $.get('https://api.github.com/users/' + info + '/repos?access_token=' + apiKey).then(function(response) {
     for (var i = 0; i < response.length; i++) {
       $('#repos').append('<li>' + response[i].name + '</li>')
@@ -24,6 +31,7 @@ Person.prototype.getRepos = function() {
   }).fail(function(error) {
     console.log("errorname");
   });
+
 
 };
 
