@@ -9,7 +9,7 @@ $(document).ready(function() {
     var info = $("#name").val()
     var getX = avatar.getRepos(info);
     console.log(event.target.value);
-    $("#info").prepend("The user's name is" + getX + ":)");
+    // $("#info").prepend("The user's name is" + getX + ":)");
   })
 
 });
