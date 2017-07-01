@@ -4,12 +4,12 @@ var Person = require('./../js/user.js').personModule;
 $(document).ready(function() {
   var avatar = new Person();
   $("#button").click(function(event) {
+    // $("#info").hide();
     event.preventDefault();
     var info = $("#name").val()
     var getX = avatar.getRepos(info);
     console.log(event.target.value);
-    // $("#info").hide();
-    // $("").prepend();
+    $("#info").prepend("The user's name is" + getX + ":)");
   })
 
 });
