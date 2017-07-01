@@ -13,6 +13,11 @@ Person.prototype.getRepos = function() {
       $('#repos').append('<li>'+response[i].name+'</li>')
       console.log(response[i]);
     }
+    $.get('https://api.github.com/users/' + info + '?access_token=' + apiKey).then(function(response) {
+      for (var i = 0; i < response.length; i++) {
+        $('#info').append('<p>'+response[i].login+'</p>')
+        console.log(response[i]);
+      }
     // displayFunction(information, response);
     //console.log(response);
   }).fail(function(error) {
